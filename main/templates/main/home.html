@@ -1,0 +1,22 @@
+{% extends "main/main.html" %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="row">
+      {% for p in posts %}
+        <div class="col s12 m6 l4">
+          <div class="card white darken-1 hoverable">
+            <div class="card-content black-text">
+              <span class="card-title">{{p.post_title}}</span>
+              <p style="font-size: 75%">{{p.date_published}}</p>
+              <p style="font-size: 90%">{{p.post_summary}}</p>
+              <img src="/media/{{p.preview_image}}" class="responsive-img">
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}
