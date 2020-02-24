@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Meu Blog</title>
+    <title>Marlon Cendron</title>
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'tinymce/css/prism.css' %}">
@@ -12,22 +12,40 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   </head>
-  <body>
 
-    <nav>
-      <div class="nav-wrapper purple darken-2 z-depth-2">
-        <a href="#" class="brand-logo">Blog</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a class="wave-effect" href="/">Home</a></li>
-          <li><a class="wave-effect" href="/admin">Admin</a></li>
-        </ul>
-      </div>
-    </nav>
+
+  <body class="grey lighten-3">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper grey darken-4 z-depth-2">
+            <div class="row">
+              <div class="col l4 offset-l2 s5 offset-s1 ">
+                <a href="/" class="brand-logo">Marlon Cendron</a>
+              </div>
+              <div class="col l4 s5">
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                  <li><a class="wave-effect" href="/">Home</a></li>
+                  <li><a class="wave-effect" href="/">About</a></li>
+                  <!-- <li><a class="wave-effect" href="/admin">Admin</a></li> -->
+                </ul>
+              </div>
+            </div>
+        </div>
+      </nav>
+    </div>
 
     {% block content %}
 
     {% endblock %}
 
+    <footer class="page-footer grey darken-4">
+      <div class="container">
+        <div class="l12 s12">
+          <h5 class="white-text">O rodapé!</h5>
+          <p style="margin:0" class="grey-text text-lighten-4">Contact: marlonvcendron@gmail.com.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 
   <!-- Jquery -->

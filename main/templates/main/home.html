@@ -5,16 +5,18 @@
   <div class="container">
     <div class="row">
       {% for p in posts %}
-        <div class="col s12 m6 l4">
-          <div class="card white darken-1 hoverable">
-            <div class="card-content black-text">
-              <span class="card-title">{{p.post_title}}</span>
-              <p style="font-size: 75%">{{p.date_published}}</p>
-              <p style="font-size: 90%">{{p.post_summary}}</p>
-              <img src="/media/{{p.preview_image}}" class="responsive-img">
+        <a href="articles/{{p.id}}">
+          <div class="col s12 m6 l4">
+            <div class="card white darken-1 hoverable medium">
+              <div class="card-content black-text">
+                <p style="overflow-wrap: break-word; font-weight: bold;" class="card-title">{{p.post_title}}</p>
+                <p style="font-size: 75%">{{p.date_published}}</p>
+                <p style="overflow-wrap: break-word;font-size: 90%">{{p.post_summary}}</p>
+                <p style="text-align: center"><img style="height: 22vh;" src="/media/{{p.preview_image}}" class="responsive-img"></p>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       {% endfor %}
     </div>
   </div>

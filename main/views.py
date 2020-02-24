@@ -9,3 +9,10 @@ def homepage(request):
         template_name='main/home.html',
         context={'posts': Post.objects.all}
     )
+
+def article(request, article_id):
+    return render(
+        request=request,
+        template_name='main/article.html',
+        context={'p': Post.objects.get(pk=article_id)}
+    )
