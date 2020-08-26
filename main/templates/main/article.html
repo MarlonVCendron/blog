@@ -2,9 +2,16 @@
 
 {% block content %}
 
-  <h1>{{p.post_title}}</h1>
-  <h2>{{p.date_published}}</h2>
+  <div class="container offset-s1 offset-l1 offset-m1">
 
-  <p>{{p.post_content|safe}}</p>
+    <div style="margin-top: 2vh; padding: 2vw" class="white darken-1 z-depth-1">
+      <div class="card-content black-text">
+        <h1>{{p.post_title}}</h1>
+        <p>{{p.date_published}}</p>
+
+        <p class="flow-text">{{p.post_content|safe}}</p>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}

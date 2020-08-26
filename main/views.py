@@ -16,3 +16,9 @@ def article(request, article_id):
         template_name='main/article.html',
         context={'p': Post.objects.get(pk=article_id)}
     )
+
+def about(request):
+    return render(
+        request=request,
+        template_name='main/about.html'
+    )

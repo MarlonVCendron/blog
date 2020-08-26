@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.violet-red{
+  background-color: #9C0F75;
+  /* background-color: #c1126e; */
+}
+
+#defaultCanvas0{
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+}

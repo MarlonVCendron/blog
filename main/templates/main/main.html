@@ -7,51 +7,47 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'tinymce/css/prism.css' %}">
 
-    <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
   </head>
 
 
-  <body class="grey lighten-3">
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper grey darken-4 z-depth-2">
-            <div class="row">
-              <div class="col l4 offset-l2 s5 offset-s1 ">
-                <a href="/" class="brand-logo">Marlon Cendron</a>
-              </div>
-              <div class="col l4 s5">
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                  <li><a class="wave-effect" href="/">Home</a></li>
-                  <li><a class="wave-effect" href="/">About</a></li>
-                  <!-- <li><a class="wave-effect" href="/admin">Admin</a></li> -->
-                </ul>
-              </div>
-            </div>
-        </div>
-      </nav>
+  <body class="grey white">
+    <div class="navbar-fixed violet-red">
+      <br>
+      <br>
+      <br>
+      <br>
     </div>
 
-    {% block content %}
 
-    {% endblock %}
+    <main>
+      {% block content %}
+      {% endblock %}
 
-    <footer class="page-footer grey darken-4">
-      <div class="container">
-        <div class="l12 s12">
-          <h5 class="white-text">O rodapé!</h5>
-          <p style="margin:0" class="grey-text text-lighten-4">Contact: marlonvcendron@gmail.com.</p>
+      <!-- <div class="container">
+        <div class="card white darken-1">
+          <div class="card-content black-text">
+            <p class="flow-text">
+              Sequi beatae est quos. Rerum suscipit animi porro dolor tempora ea. Asperiores eum non reiciendis cum natus. Ipsam omnis ut quia temporibus corporis.Esse praesentium ab deleniti numquam numquam explicabo. Nemo et ex suscipit qui quas labore voluptatem. Illum harum vel et odit ipsa. Neque rem voluptatum possimus error quibusdam. Fuga autem aut mollitia cumque. Qui doloribus aliquid provident ut culpa eos rerum magnam.Voluptatem quaerat quia voluptates nisi accusamus beatae possimus.
+              Sequi beatae est quos. Rerum suscipit animi porro dolor tempora ea. Asperiores eum non reiciendis cum natus. Ipsam omnis ut quia temporibus corporis.Esse praesentium ab deleniti numquam numquam explicabo. Nemo et ex suscipit qui quas labore voluptatem. Illum harum vel et odit ipsa. Neque rem voluptatum possimus error quibusdam. Fuga autem aut mollitia cumque. Qui doloribus aliquid provident ut culpa eos rerum magnam.Voluptatem quaerat quia voluptates nisi accusamus beatae possimus.
+            </p>
+          </div>
         </div>
-      </div>
+      </div> -->
+
+    </main>
+
+    <footer class="page-footer violet-red">
     </footer>
   </body>
 
-  <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+  <script src="{% static 'js/background.js' %}"></script>
 
   <script type="text/javascript" src="{% static 'tinymce/js/prism.js' %}"></script>
 </html>
