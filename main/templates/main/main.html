@@ -5,6 +5,13 @@
     <title>Marlon Cendron</title>
 
     {% load static %}
+    <style media="screen">
+      @font-face {
+        font-family:"Menlo";
+        src: url("{% static 'fonts/Menlo-Regular.ttf' %}") format("truetype");
+      }
+    </style>
+
     <link rel="stylesheet" href="{% static 'tinymce/css/prism.css' %}">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,33 +22,49 @@
 
 
   <body class="grey white">
-    <div class="navbar-fixed violet-red">
-      <br>
-      <br>
-      <br>
-      <br>
+
+
+    <div id="left">
+      <main>
+        <div class="container">
+
+          {% block content %}
+          {% endblock %}
+
+          {% for i in "1234" %}
+          <div class="card white darken-1 black-text" style="display: flex">
+            <img src="{% static '/images/default_image.png' %}" style="height: 28vh">
+            <div class="valign-wrapper" style="padding: 2vh">
+              <p class="flow-text grey-text text-darken-3">
+                Sequi beatae est quos. Rerum suscipit animi porro dolor tempora ea. Asperiores eum non reiciendis cum natusSequi beatae est quos.
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </main>
+    </div>
+    <div id="right" class="violet-red">
+      <div class="content center-align">
+        <h1 class="grey-text text-lighten-4">Marlon Cendron</h1>
+        <img class="circle responsive-img" src="{% static 'images/default_image.png' %}" >
+        <p class="flow-text grey-text text-lighten-4" style="padding: 0 4vw">
+          Sequi beatae est quos. Rerum suscipit animi porro dolor tempora ea. Asperiores eum non reiciendis cum natusSequi beatae est quos.
+        </p>
+      </div>
+
+      <ul>
+        <li><a class="grey-text text-lighten-3" href="https://t.me/mcendron">@mcendron</a></li>
+        <li><a class="grey-text text-lighten-3" href="mailto:marlonvcendron@gmail.com">marlonvcendron@gmail.com</a></li>
+      </ul>
+
+      <footer class="grey-text text-lighten-3">
+        © 2020 Copyright Text
+      </footer>
     </div>
 
 
-    <main>
-      {% block content %}
-      {% endblock %}
-
-      <!-- <div class="container">
-        <div class="card white darken-1">
-          <div class="card-content black-text">
-            <p class="flow-text">
-              Sequi beatae est quos. Rerum suscipit animi porro dolor tempora ea. Asperiores eum non reiciendis cum natus. Ipsam omnis ut quia temporibus corporis.Esse praesentium ab deleniti numquam numquam explicabo. Nemo et ex suscipit qui quas labore voluptatem. Illum harum vel et odit ipsa. Neque rem voluptatum possimus error quibusdam. Fuga autem aut mollitia cumque. Qui doloribus aliquid provident ut culpa eos rerum magnam.Voluptatem quaerat quia voluptates nisi accusamus beatae possimus.
-              Sequi beatae est quos. Rerum suscipit animi porro dolor tempora ea. Asperiores eum non reiciendis cum natus. Ipsam omnis ut quia temporibus corporis.Esse praesentium ab deleniti numquam numquam explicabo. Nemo et ex suscipit qui quas labore voluptatem. Illum harum vel et odit ipsa. Neque rem voluptatum possimus error quibusdam. Fuga autem aut mollitia cumque. Qui doloribus aliquid provident ut culpa eos rerum magnam.Voluptatem quaerat quia voluptates nisi accusamus beatae possimus.
-            </p>
-          </div>
-        </div>
-      </div> -->
-
-    </main>
-
-    <footer class="page-footer violet-red">
-    </footer>
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
