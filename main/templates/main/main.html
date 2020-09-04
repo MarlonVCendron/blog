@@ -31,9 +31,9 @@
           {% block content %}
           {% endblock %}
 
-          {% for i in "1234" %}
+          {% for i in "123456" %}
           <div class="card white darken-1 black-text" style="display: flex">
-            <img src="{% static '/images/default_image.png' %}" style="height: 28vh">
+            <img src="{% static '/images/Untitled.png' %}" style="height: 28vh">
             <div class="valign-wrapper" style="padding: 2vh">
               <p class="flow-text grey-text text-darken-3">
                 Sequi beatae est quos. Rerum suscipit animi porro dolor tempora ea. Asperiores eum non reiciendis cum natusSequi beatae est quos.
@@ -48,19 +48,30 @@
     <div id="right" class="violet-red">
       <div class="content center-align">
         <h1 class="grey-text text-lighten-4">Marlon Cendron</h1>
-        <img class="circle responsive-img" src="{% static 'images/default_image.png' %}" >
+        <img class="circle responsive-img" src="{% static 'images/yeah.jpg' %}" style="width: 40%">
         <p class="flow-text grey-text text-lighten-4" style="padding: 0 4vw">
           Sequi beatae est quos. Rerum suscipit animi porro dolor tempora ea. Asperiores eum non reiciendis cum natusSequi beatae est quos.
         </p>
+
+
+        <ul class="grey-text text-lighten-2 left-align" style="display: inline-block">
+          <li>Telegram: <a class="grey-text text-lighten-3" href="https://t.me/mcendron">@mcendron</a></li>
+          <li>E-mail: <a class="grey-text text-lighten-3" href="mailto:marlonvcendron@gmail.com">marlonvcendron@gmail.com</a></li>
+          <li>Github: <a class="grey-text text-lighten-3" href="https://github.com/MarlonVCendron">Github</a></li>
+        </ul>
       </div>
 
-      <ul>
-        <li><a class="grey-text text-lighten-3" href="https://t.me/mcendron">@mcendron</a></li>
-        <li><a class="grey-text text-lighten-3" href="mailto:marlonvcendron@gmail.com">marlonvcendron@gmail.com</a></li>
-      </ul>
+
 
       <footer class="grey-text text-lighten-3">
-        © 2020 Copyright Text
+        <div class="container" style="width: 40%">
+          <ul id="lang" style="display: flex; justify-content: center">
+            <li><a href="">EN</a></li>
+            <li><a href="">DE</a></li>
+            <li><a href="">PT</a></li>
+          </ul>
+        </div>
+
       </footer>
     </div>
 

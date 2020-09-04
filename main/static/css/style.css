@@ -17,6 +17,10 @@ main {
   /* background-color: #c1126e; */
 }
 
+h1{
+  font-size: 3.6rem;
+}
+
 #defaultCanvas0{
   position: absolute;
   top: 0;
@@ -25,11 +29,11 @@ main {
 }
 
 #left{
-  width: 60%;
+  width: 70%;
 }
 
 #right{
-  width: 40%;
+  width: 30%;
   height: 100vh;
   position: fixed;
   right: 0;
@@ -41,7 +45,19 @@ main {
   flex: 1 0 auto;
 }
 
+ul li a{
+  font-weight: bold;
+}
+
+#lang li{
+  margin: 0 10px;
+}
+
+#lang li img{
+  width: 1.8vw;
+}
+
 footer{
   background-color: #af2d8b;
-  padding: 20px;
+  /* padding: 20px; */
 }

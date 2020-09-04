@@ -4,7 +4,7 @@ let s = 64;
 let slashes = [];
 
 function setup(){
-  createCanvas($(document).width() * 0.6, $(document).height());
+  createCanvas($(document).width() * 0.7, $(document).height());
   background(248);
 
   stroke(156, 15, 117);
@@ -16,9 +16,7 @@ function draw(){
 
   for (let i = 0; i < slashes.length; i++) {
     slashes[i].draw();
-  }
 
-  for (let i = 0; i < slashes.length; i++) {
     if(slashes[i].updating){
       slashes[i].update();
     }
