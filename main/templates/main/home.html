@@ -2,23 +2,17 @@
 
 {% block content %}
 
-  <!-- <div class="container">
-    <div class="row">
-      {% for p in posts %}
-        <a href="articles/{{p.id}}">
-          <div class="col s12 m6 l4">
-            <div class="card white darken-1 hoverable medium">
-              <div class="card-content black-text">
-                <p style="overflow-wrap: break-word; font-weight: bold;" class="card-title">{{p.post_title}}</p>
-                <p style="font-size: 75%">{{p.date_published}}</p>
-                <p style="overflow-wrap: break-word;font-size: 90%">{{p.post_summary}}</p>
-                <p style="text-align: center"><img style="height: 22vh;" src="/media/{{p.preview_image}}" class="responsive-img"></p>
-              </div>
-            </div>
-          </div>
-        </a>
-      {% endfor %}
+  <div style="margin: 0 auto; width: 80%; display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: .5rem">
+  {% for p in posts %}
+    <div class="card hoverable white darken-1 black-text post-card">
+      <img src="/media/{{p.preview_image}}" style="height: 28vh; width: 28vh">
+      <div class="valign-wrapper" style="padding: 2vh">
+        <p class="flow-text grey-text text-darken-3" style="word-break: break-all">
+          {{p.post_title}}
+        </p>
+      </div>
     </div>
-  </div> -->
+  {% endfor %}
+  </div>
 
 {% endblock %}

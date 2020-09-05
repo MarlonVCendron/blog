@@ -12,13 +12,12 @@ main {
   flex: 1 0 auto;
 }
 
-.violet-red{
-  background-color: #9C0F75;
-  /* background-color: #c1126e; */
+.rose-red{
+  background-color: #b51151;
 }
 
 h1{
-  font-size: 3.6rem;
+  /* font-size: 3.6rem; */
 }
 
 #defaultCanvas0{
@@ -28,36 +27,40 @@ h1{
   overflow: hidden;
 }
 
-#left{
-  width: 70%;
-}
-
-#right{
-  width: 30%;
-  height: 100vh;
-  position: fixed;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.content{
-  flex: 1 0 auto;
-}
-
 ul li a{
   font-weight: bold;
 }
 
-#lang li{
-  margin: 0 10px;
+#lang{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  margin: 10px 10px 0 0;
 }
 
-#lang li img{
-  width: 1.8vw;
+path[d="M7 10l5 5 5-5z"] {
+  fill: rgb(248, 248, 248);
+}
+
+#lang input{
+  font-weight: bold;
+  color: rgb(248, 248, 248);
+  border: none;
+}
+
+#lang span{
+  color: #b51151;
+}
+
+.post-card{
+  margin: .5rem 0 1rem 0;
+  display: flex;
+  width: 49%;
+  cursor: pointer;
 }
 
 footer{
-  background-color: #af2d8b;
+  background-color: #D33773;
   /* padding: 20px; */
 }

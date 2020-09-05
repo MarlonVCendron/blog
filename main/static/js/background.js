@@ -4,10 +4,10 @@ let s = 64;
 let slashes = [];
 
 function setup(){
-  createCanvas($(document).width() * 0.7, $(document).height());
+  createCanvas($(document).width(), $(document).height());
   background(248);
 
-  stroke(156, 15, 117);
+  stroke(181, 17, 81);
   drawPattern();
 }
 
@@ -49,7 +49,7 @@ function drawPattern(){
 
 function windowResized() {
    resizeCanvas(10, 10);
-   resizeCanvas($(document).width() * 0.6, $(document).height());
+   resizeCanvas($(document).width(), $(document).height());
    drawPattern();
 }
 
