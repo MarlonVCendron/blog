@@ -23,30 +23,14 @@
 
   <body class="grey white">
 
-
-    <div class="center-align rose-red">
-      <h1 class="grey-text text-lighten-4">Marlon Cendron</h1>
-      <div class="container valign-wrapper" style="display: flex">
-        <img class="circle responsive-img" src="{% static 'images/yeah.jpg' %}" style="height: 25vh">
-        <p class="flow-text grey-text text-lighten-4 left-align" style="padding: 0 4vw">
-          Sequi beatae est quos. Rerum suscipit animi porro dolor tempora ea. Asperiores eum non reiciendis cum natusSequi beatae est quos.
-        </p>
-      </div>
-
-      <ul class="grey-text text-lighten-2 left-align" style="display: inline-block">
-        <li>Telegram: <a target="_blank" rel="noopener noreferrer" class="grey-text text-lighten-3" href="https://t.me/mcendron">@mcendron</a></li>
-        <li>E-mail: <a target="_blank" rel="noopener noreferrer" class="grey-text text-lighten-3" href="mailto:marlonvcendron@gmail.com">marlonvcendron@gmail.com</a></li>
-        <li>Github: <a target="_blank" rel="noopener noreferrer" class="grey-text text-lighten-3" href="https://github.com/MarlonVCendron">MarlonVCendron</a></li>
-      </ul>
-
-      <div class="input-field" id="lang">
-        <select>
-          <option value="1">EN</option>
-          <option value="2">DE</option>
-          <option value="3">PT</option>
-        </select>
-      </div>
+    <div class="input-field rose-red" id="lang">
+      <select>
+        <option value="1">EN</option>
+        <option value="2">DE</option>
+        <option value="3">PT</option>
+      </select>
     </div>
+
 
     <main>
       {% block content %}
@@ -56,11 +40,10 @@
 
     <footer class="grey-text text-lighten-3">
       <div class="container" style="width: 40%">
+
       </div>
 
     </footer>
-
-
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -69,5 +52,6 @@
   <script src="{% static 'js/background.js' %}"></script>
   <script src="{% static 'js/initialization.js' %}"></script>
 
-  <script type="text/javascript" src="{% static 'tinymce/js/prism.js' %}"></script>
+  <!-- <script type="text/javascript" src="{% static 'tinymce/js/prism.js' %}"></script> -->
+
 </html>

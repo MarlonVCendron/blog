@@ -25,7 +25,7 @@ SECRET_KEY = '*a(25t@+a^=zr1g&x^t_^wyq)f4@hcz*q40p01d+&@-#wtnr0e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '6fec2a249c59.ngrok.io']
+ALLOWED_HOSTS = ['localhost', '8e1bb53b300d.ngrok.io']
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,

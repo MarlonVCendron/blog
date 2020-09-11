@@ -20,6 +20,5 @@ app_name = 'main'
 
 urlpatterns = [
     path('', views.homepage, name='homepage'),
-    re_path(r'^articles/([0-9]*)$', views.article, name='article'),
-    path('about', views.about, name='about'),
+    re_path(r'^posts/([0-9]*)$', views.post, name='post'),
 ]
