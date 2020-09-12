@@ -12,7 +12,7 @@ def homepage(request):
     )
 
 def post(request, post_id):
-    dataDictionary = {'post': Post.objects.get(pk=post_id).content}
+    dataDictionary = {'post': Post.objects.get(pk=post_id).content_EN}
     dataJSON = dumps(dataDictionary)
     return render(
         request=request,

@@ -6,3 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
   $('select').formSelect();
 });
+
+$("#lang").on('change', function() {
+  const newLang = $('#lang input')[0].value;
+  console.log(newLang);
+});
