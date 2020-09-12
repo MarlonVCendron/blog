@@ -9,7 +9,9 @@
     <div class="container valign-wrapper" style="display: flex">
       <img class="circle responsive-img" src="{% static 'images/yeah.jpg' %}" style="height: 25vh">
       <p class="flow-text grey-text text-lighten-4 left-align" style="padding: 0 4vw">
-        Sequi beatae est quos. Rerum suscipit animi porro dolor tempora ea. Asperiores eum non reiciendis cum natusSequi beatae est quos.
+        <span lang="en">English English English English English English English English English </span>
+        <span lang="de">Deutsch Deutsch Deutsch Deutsch Deutsch Deutsch Deutsch Deutsch Deutsch </span>
+        <span lang="pt">Português Português Português Português Português Português Português </span>
       </p>
     </div>
 
@@ -22,6 +24,10 @@
 
   <!-- 🐿 -->
 
+  <!-- ------------------------ -->
+  <!-- IDEA: COOKIES PRO IDIOMA -->
+  <!-- ------------------------ -->
+
   <div style="margin: 0 auto; width: 80%; display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: .5rem">
   {% for p in posts %}
     <div class="card hoverable white darken-1 black-text post-card">
@@ -29,7 +35,9 @@
         <img src="/media/{{p.preview_image}}" style="height: 28vh; width: 28vh"/>
         <div class="valign-wrapper" style="padding: 2vh">
           <p class="flow-text grey-text text-darken-3" style="word-break: break-all">
-            {{p.title_EN}}
+            <span lang="en">{{p.title_EN}}</span>
+            <span lang="de">{{p.title_DE}}</span>
+            <span lang="pt">{{p.title_PT}}</span>
           </p>
         </div>
       </a>

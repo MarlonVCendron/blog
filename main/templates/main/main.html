@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Marlon Cendron</title>
@@ -20,9 +20,7 @@
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
   </head>
 
-
   <body class="grey white">
-
     <div class="input-field rose-red" id="lang">
       <select>
         <option value="1">EN</option>
@@ -31,27 +29,22 @@
       </select>
     </div>
 
-
     <main>
       {% block content %}
       {% endblock %}
     </main>
 
-
-    <footer class="grey-text text-lighten-3">
+    <!-- <footer class="grey-text text-lighten-3">
       <div class="container" style="width: 40%">
-
       </div>
-
-    </footer>
+    </footer> -->
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="{% static 'js/language-selection.js' %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
   <script src="{% static 'js/background.js' %}"></script>
-  <script src="{% static 'js/language-selection.js' %}"></script>
 
   <!-- <script type="text/javascript" src="{% static 'tinymce/js/prism.js' %}"></script> -->
-
 </html>

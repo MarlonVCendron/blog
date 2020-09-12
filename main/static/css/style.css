@@ -79,3 +79,7 @@ footer{
 strong{
   font-weight: bold;
 }
+
+*[lang='de'], *[lang='pt']{
+  display: none;
+}

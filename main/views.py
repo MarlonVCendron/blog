@@ -12,7 +12,8 @@ def homepage(request):
     )
 
 def post(request, post_id):
-    dataDictionary = {'post': Post.objects.get(pk=post_id).content_EN}
+    currentPost = Post.objects.get(pk=post_id)
+    dataDictionary = {'en': currentPost.content_EN, 'de': currentPost.content_DE, 'pt': currentPost.content_PT}
     dataJSON = dumps(dataDictionary)
     return render(
         request=request,
