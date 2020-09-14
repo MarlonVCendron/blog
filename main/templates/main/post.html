@@ -1,5 +1,6 @@
 {% extends "main/main.html" %}
 
+{% load i18n %}
 
 {% block content %}
 
@@ -17,7 +18,7 @@
     h1{
       color: #b51151;
     }
-    </style>
+  </style>
 
   <a href="/" id="home-btn" class="btn-floating btn-large rose-red" style="position: fixed; top: 20px; left: 20px">
     <i class="material-icons">home</i>
@@ -27,18 +28,10 @@
   <div class="container offset-s1 offset-l1 offset-m1" style="margin-top: 2vh; margin-bottom: 2vh;">
     <div style="padding: 2vw" class="white darken-1 z-depth-1">
       <div class="card-content black-text">
-        <h1 style="word-break: break-all;">
-          <span lang="en">{{p.title_EN}}</span>
-          <span lang="de">{{p.title_DE}}</span>
-          <span lang="pt">{{p.title_PT}}</span>
-        </h1>
-        <p>{{p.date_published}}</p>
+        <h1 style="word-break: break-all;">{{title}}</h1>
+        <p>{{date}}</p>
 
-        <p id="content" class="flow-text" style="hyphens: auto">
-          <span id="content_en" lang="en">{{p.content_EN}}</span>
-          <span id="content_de" lang="de">{{p.content_DE}}</span>
-          <span id="content_pt" lang="pt">{{p.content_PT}}</span>
-        </p>
+        <p id="content" class="flow-text" style="hyphens: auto"></p>
       </div>
     </div>
   </div>
@@ -47,16 +40,12 @@
 
   <script>
     const converter = new showdown.Converter();
-    const en = document.getElementById('content_en');
-    const de = document.getElementById('content_de');
-    const pt = document.getElementById('content_pt');
+    const content = document.getElementById('content');
     showdown.setFlavor('github');
 
     var data = JSON.parse("{{data|escapejs}}");
 
-    en.innerHTML = converter.makeHtml(data.en);
-    de.innerHTML = converter.makeHtml(data.de);
-    pt.innerHTML = converter.makeHtml(data.pt);
+    content.innerHTML = converter.makeHtml(data.content);
   </script>
 
 {% endblock %}

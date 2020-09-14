@@ -1,10 +1,11 @@
+{% load static i18n %}
+
 <!DOCTYPE html>
 <html dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Marlon Cendron</title>
 
-    {% load static %}
     <style media="screen">
       @font-face {
         font-family:"Menlo";
@@ -12,21 +13,35 @@
       }
     </style>
 
-    <link rel="stylesheet" href="{% static 'tinymce/css/prism.css' %}">
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
   </head>
 
   <body class="grey white">
+<!--
     <div class="input-field rose-red" id="lang">
       <select>
         <option value="1">EN</option>
         <option value="2">DE</option>
         <option value="3">PT</option>
       </select>
+    </div>
+-->
+
+    {% get_current_language as LANGUAGE_CODE %}
+
+    <div class="input-field rose-red" id="lang">
+      <form action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        <select name="language" onchange="this.form.submit()">
+            {% get_available_languages as LANGUAGES %}
+            {% for language in LANGUAGES %}
+            <option value="{{ language.0 }}" {% if language.0 == LANGUAGE_CODE %} selected{% endif %}>{{ language.0 }}</option>
+            {% endfor %}
+        </select>
+      </form>
     </div>
 
     <main>
@@ -45,6 +60,4 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
   <script src="{% static 'js/background.js' %}"></script>
-
-  <!-- <script type="text/javascript" src="{% static 'tinymce/js/prism.js' %}"></script> -->
 </html>

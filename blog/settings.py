@@ -25,7 +25,7 @@ SECRET_KEY = '*a(25t@+a^=zr1g&x^t_^wyq)f4@hcz*q40p01d+&@-#wtnr0e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '8e1bb53b300d.ngrok.io']
+ALLOWED_HOSTS = ['localhost', 'b8ed2cde1fa6.ngrok.io']
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,
@@ -66,13 +66,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
-    'tinymce',
 ]
 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -144,6 +144,15 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('de', 'German'),
+    ('pt', 'Português'),
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

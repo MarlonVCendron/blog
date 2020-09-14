@@ -50,10 +50,12 @@ path[d="M7 10l5 5 5-5z"] {
   color: rgb(248, 248, 248);
   border: none;
   margin: 0;
+  text-transform: uppercase;
 }
 
 #lang span{
   color: #b51151;
+  text-transform: uppercase;
 }
 
 .post-card{
@@ -80,6 +82,6 @@ strong{
   font-weight: bold;
 }
 
-*[lang='de'], *[lang='pt']{
+/* *[lang='de'], *[lang='pt']{
   display: none;
-}
+} */
