@@ -4,6 +4,7 @@
 <html dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Marlon Cendron</title>
 
     <style media="screen">
@@ -13,6 +14,8 @@
       }
     </style>
 
+    <link rel="icon" href="{% static 'images/lorenz.png' %}">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,15 +23,6 @@
   </head>
 
   <body class="grey white">
-<!--
-    <div class="input-field rose-red" id="lang">
-      <select>
-        <option value="1">EN</option>
-        <option value="2">DE</option>
-        <option value="3">PT</option>
-      </select>
-    </div>
--->
 
     {% get_current_language as LANGUAGE_CODE %}
 
@@ -49,10 +43,6 @@
       {% endblock %}
     </main>
 
-    <!-- <footer class="grey-text text-lighten-3">
-      <div class="container" style="width: 40%">
-      </div>
-    </footer> -->
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

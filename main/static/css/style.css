@@ -2,22 +2,22 @@
   font-family: 'Menlo';
 }
 
+.rose-red{
+  background-color: #b51151;
+}
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
+strong{
+  font-weight: bold;
+}
+
 main {
   flex: 1 0 auto;
-}
-
-.rose-red{
-  background-color: #b51151;
-}
-
-h1{
-  /* font-size: 3.6rem; */
 }
 
 #defaultCanvas0{
@@ -32,13 +32,15 @@ ul li a{
 }
 
 #lang{
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   top: 0;
   right: 0;
   margin: 20px 20px 0 0;
   width: 100px;
   padding: 0 15px;
   border-radius: 25px;
+  z-index: 100;
 }
 
 path[d="M7 10l5 5 5-5z"] {
@@ -69,19 +71,38 @@ path[d="M7 10l5 5 5-5z"] {
   display: flex;
 }
 
+.post-card a img{
+  height: 28vh;
+  width: 28vh;
+}
+
 #home-btn:hover{
   background-color: #D33773;
 }
 
-footer{
-  background-color: #D33773;
-  /* padding: 20px; */
+#content img{
+  max-width: 100%;
 }
 
-strong{
-  font-weight: bold;
+@media only screen and (max-width : 1280px) {
+  .post-card{
+    display: block;
+    width: 100%;
+  }
 }
 
-/* *[lang='de'], *[lang='pt']{
-  display: none;
-} */
+@media only screen and (max-width : 480px) {
+  .post-card{
+    display: block;
+    width: 100%;
+  }
+
+  .post-card a{
+    display: block;
+  }
+
+  .post-card a img{
+    width: 100%;
+    height: auto;
+  }
+}

@@ -7,7 +7,7 @@
   <div class="center-align rose-red" style="padding-top: 10px; width: 100%">
     <h1 class="grey-text text-lighten-4">Marlon Cendron</h1>
     <div class="container valign-wrapper" style="display: flex">
-      <img class="circle responsive-img" src="{% static 'images/yeah.jpg' %}" style="height: 25vh">
+      <img class="circle responsive-img" src="{% static 'images/yeah.jpg' %}" style="height: 20vh">
       <p class="flow-text grey-text text-lighten-4 left-align" style="padding: 0 4vw">
         {% trans "English English English English English English English English English" %}
       </p>
@@ -26,11 +26,9 @@
   {% for p in posts %}
     <div class="card hoverable white darken-1 black-text post-card">
       <a href="/posts/{{p.0}}" style="width: 100%">
-        <img src="/media/{{p.2}}" style="height: 28vh; width: 28vh"/>
+        <img src="/media/{{p.2}}"/>
         <div class="valign-wrapper" style="padding: 2vh">
-          <p class="flow-text grey-text text-darken-3" style="word-break: break-all">
-            <span lang="en">{{p.1}}</span>
-          </p>
+          <p class="flow-text grey-text text-darken-3" style="word-break: break-all">{{p.1}}</p>
         </div>
       </a>
     </div>
