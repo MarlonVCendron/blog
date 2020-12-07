@@ -16,6 +16,7 @@ class Post(models.Model):
     content_PT = models.TextField(default="")
 
     preview_image = models.ImageField(upload_to='uploads/%Y/%m/%d/', default='static/default_image.png')
+    # default=timezone.now
     date_published = models.DateTimeField('date published', default=datetime.now())
 
     def __str__(self):
